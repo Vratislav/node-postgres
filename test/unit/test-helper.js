@@ -20,7 +20,8 @@ p.write = function (packet, cb) {
   }
 }
 
-p.end = function() {
+p.end = function(packet) {
+  this.packets.push(packet)
   p.closed = true;
 }
 
